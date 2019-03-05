@@ -1,0 +1,5 @@
+주석에도 나와있듯 해당 인덱스를 만들어주고 에러 케이스만 잘 잡으면 된다.
+// In case of numRows = 4,
+// str      P A Y P A L I S H I  R  I  N  G
+// idx      0 1 2 3 4 5 6 7 8 9 10 11 12 13
+// arridx   0 1 2 3 2 1 0 1 2 3  2  1  0  1
