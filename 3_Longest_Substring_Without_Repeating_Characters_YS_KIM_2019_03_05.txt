@@ -9,9 +9,9 @@ Explanation: The answer is "wke", with the length of 3.
              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 이처럼 반복 없는 가장 긴 서브 스트링을 찾는 것이다.
 
-이를 위해 스트링을 돌면서 맵에 알파벳을 넣었고 맵에 알파벳이 없을 경우, (반복이 없다)
-알파뱃을 넣을 때마다 keyset 의 사이즈를 비교하며 maxlen 을 늘렸다.
-만약 맵에 알파벳이 있다면(반복이 있다.) 하나의 가정을 통해 긴 substring 을 찾는데 도움을 주도록 구현했다.
+이를 위해 스트링을 돌면서 set에 알파벳을 넣었고 set에 알파벳이 없을 경우, (반복이 없다)
+알파뱃을 넣을 때마다 set 의 사이즈를 비교하며 maxlen 을 늘렸다.
+만약 set에 알파벳이 있다면(반복이 있다.) 하나의 가정을 통해 긴 substring 을 찾는데 도움을 주도록 구현했다.
 
 그 하나의 가정은 현재 index 에서 거꾸로 돌면서 반복되는 알파벳을 제외하고 지금 현재 index의 알파벳을 넣고 루프를 다시 돌아본다면
 더 긴 알파벳 반복이 없는 substring 이 될 수도 있다는 가정이었다.
