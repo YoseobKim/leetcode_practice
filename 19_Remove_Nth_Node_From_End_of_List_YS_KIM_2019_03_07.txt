@@ -1,0 +1,18 @@
+이 문제는 뒤에서 n 번째의 노드를 싱글링크드리스트에서 지우는 것이다.
+Given linked list: 1->2->3->4->5, and n = 2.
+
+After removing the second node from the end, the linked list becomes 1->2->3->5.
+매우 잘 알려진 방법인 runner 를 이용하면 쉽게 풀 수 있다.
+runner 는 다음과 같다. 
+ahead 와 tail 을 따로 두고 둘의 차이를 준 뒤 ahead 가 끝에 도달하면 tail 이 n 만큼의 차이가 생기게 되는 알고리즘이다.
+1->2->3->4->5 , n = 2
+t     h
+   t     h
+      t      h
+         t      h==null
+이 때 t 를 지우면 되는데 single linked list 여서 그런게 불가능하므로 이 알고리즘에서는
+prevTail 을 하나 더 두었다. prevTail 은 tail 이 움직이기 전에 저장해두는 변수로 tail 과 딱 하나의 차이를 갖게 된다.
+그렇게 되면 prevTail.next = tail.next 로 간단하게 tail 을 없앨 수 있다.
+
+예외 케이스로는 어레이 사이즈가 1 이하인 경우 볼 것도 없이 null 이면 되고
+길이와 n 이 같으면 첫번째것을 지우면 된다.
