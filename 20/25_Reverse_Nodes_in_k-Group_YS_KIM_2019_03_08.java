@@ -5,6 +5,9 @@
  *     ListNode next;
  *     ListNode(int x) { val = x; }
  * }
+ * 
+ * Currently this solution is not working properly due to memory exceeded sitation.
+ * Need to solve it w/o map or array.
  */
 class Solution {
     private int getLength(ListNode node) {
