@@ -50,6 +50,8 @@ class Solution {
             first = next;
             prevLast = last;
             jumpForLast = jumpForLast - 2;
+            // first -> last linked. So next last jump should be minused 2.
+            // ex) 1->2->3->4, initial jumpForLast = 3, 1->4 (next first 2 and next last 3, in this case jumpForLast = 1)
             last = jump(next, jumpForLast);
             loopCount++;
         }
