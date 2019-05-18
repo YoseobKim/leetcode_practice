@@ -33,7 +33,9 @@ class Solution {
         // have invalid open parentheses
         for(int invalidOpen : parenthesesStack) {
             int removeIndex = invalidOpen - diff;
+            //System.out.println(ret);
             ret = charRemoveAt(ret, removeIndex);
+            //System.out.println(ret);
             diff++;
         }
         
@@ -41,9 +43,8 @@ class Solution {
     }
     
     public List<String> removeInvalidParentheses(String s) {
-        List<String> ret = new ArrayList<>();
-        String str = removeInvalidParenthesesHelper(s);
-        System.out.println(str);
-        return ret;
+        Set<String> retHelper = new HashSet<>();
+        retHelper.add(removeInvalidParenthesesHelper(s));
+        return new ArrayList<>(retHelper);
     }
 }
